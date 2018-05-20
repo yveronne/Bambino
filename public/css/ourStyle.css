@@ -1,0 +1,180 @@
+@font-face{
+	font-family: 'roboto';
+	src: url('fonts/Roboto-Black.ttf');
+}
+
+#top-left-nav{
+	width: 75%; 
+	margin-left: 25%; 
+	margin-right: 0%
+}
+
+.nav-wrapper #nav-mobile li{
+	display: inline
+}
+.nav-extended{
+	background-color: #FFF;
+}
+
+a.nav-link{
+	color: #000000;
+}
+
+.nav-content{
+	width: 100%;
+	margin: auto
+}
+
+nav .sidenav-trigger {
+  float: left;
+  position: relative;
+  z-index: 1;
+  height: 56px;
+  margin: 0 18px;
+  color : black;
+}
+
+.tabs.tabs-transparent .tab a,
+.tabs.tabs-transparent .tab.disabled a,
+.tabs.tabs-transparent .tab.disabled a:hover {
+  color: rgba(0, 0, 0, 1);
+  font-family: 'Montserrat Alternates';
+  font-weight: bold;
+  font-size: 120%
+}
+
+.tabs.tabs-transparent .tab a:hover,
+.tabs.tabs-transparent .tab a.active {
+  color: #9C1735;
+  font-family: 'Montserrat Alternates';
+  font-weight: bold;
+}
+
+.tabs.tabs-transparent .indicator {
+  background-color: #000;
+}
+
+.tabs .tab {
+  display: inline-block;
+  text-align: center;
+  line-height: 48px;
+  height: 48px;
+  padding: 0; 
+  text-transform: uppercase;
+  width: 33%;
+  margin:auto;
+
+}
+
+#footie{
+	text-align: center;
+	font-family: 'Indie Flower', cursive;
+	height: 100px;
+	padding-top: 30px;
+	border-top: 1px solid #99D1F3;
+	margin: auto;
+	font-size: 150%
+}
+
+#homeTitle{
+	text-align: center;
+	border-top: 5px solid black;
+	border-bottom: 5px solid black;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-family: 'roboto';
+	font-weight: bold;
+}
+
+.homeCard{
+	border: 1px solid #9C1735;
+	margin: 10px;
+	height: 350px;
+	text-align: center;
+	box-shadow: 2px 2px 1px
+}
+
+.homeCard img{
+	height: 190px;
+}
+
+.homeCard h6{
+	font-family: 'Lato', sans-serif;
+}
+
+.homeCard h6:nth-child(2){
+	font-weight: bold;
+}
+
+.homeCard h6:nth-child(3){
+	text-transform: uppercase;
+}
+
+.homeCard h6:nth-child(4){
+	color: #9C1735;
+	font-weight: bold;
+	font-size: 150%
+}
+
+.btn-mine{
+	text-transform: none;
+	background-color: #272759;
+	color: red;
+}
+
+.myBreadcrumb{
+	height: 50px;
+	background-color: #99D1F3;
+}
+
+.myBreadcrumb a{
+	color: black;
+	font-family: 'Lato';
+}
+
+.myBreadcrumb a:hover{
+	text-decoration: underline;
+}
+
+.myBreadcrumb a.actualBreadcrumb{
+	font-weight: bold;
+}
+
+.content{
+	border: 1px solid black;
+}
+
+.content h5{
+	font-family: 'roboto';
+	font-weight: bold;
+	text-transform: uppercase;
+	border-bottom: 3px solid black;
+	padding-bottom: 10px
+}
+
+.myCard{
+	border: 1px solid #9C1735;
+	margin: 5px;
+	padding: 5px;
+	text-align: center
+}
+
+.myCard h6{
+	position: inherit;
+	font-family: 'Montserrat';
+	color: #9C1735;
+	font-weight: bold;
+	font-size: 170%
+}
+
+.containerDiv{
+	border: 1px solid #9C1735;
+}
+
+.containerDiv > h6{
+	border-bottom: 1px solid black;
+	font-family: 'Lato';
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+
