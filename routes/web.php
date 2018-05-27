@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('home');
-});
+});*/
+
+Route::get('/', 'ProduitController@recent')->name('home');
+
+Route::get('/products', 'ProduitController@index')->name('products');
+
+Route::get('/categories', 'CategorieController@index')->name('categories');
