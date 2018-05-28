@@ -11,13 +11,15 @@ class ProduitController extends Controller
 
     public function recent(){
 
+
         $products = Produit::all()->take(4);
         return view('home', compact('products'));
     }
 
     public function index(){
 
-        $products = Produit::all();
+        $products = Produit::paginate(12);
         return view('products', compact('products'));
     }
+
 }

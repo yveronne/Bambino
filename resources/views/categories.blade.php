@@ -11,6 +11,7 @@
 @endsection
 
 @section('content')
+    <?php $i=0; ?>
 
     <div class="row myBreadcrumb align-items-center">
         <div class="col-md-12">
@@ -22,27 +23,34 @@
     <div class="row content">
         <div class="col-md-12">
             <h5>Les catégories</h5>
-            <div class="row">
-                <div class="col-md myCard">
-                    <img src="images/culotte.jpg" class="img-fluid">
-                    <h6>Culottes</h6>
-                </div>
-                <div class="col-md myCard">
-                    <img src="images/robe.jpg" class="img-fluid">
-                    <h6>Robes</h6>
-                </div>
-                <div class="col-md myCard">
-                    <img src="images/grenouillere.jpg" class="img-fluid">
-                    <h6>Grenouillères</h6>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="row">
-        @foreach($categories as $category)
-            {{$category->NOMCATEGORIE}}
-        @endforeach
+            @foreach($categories as $category)
+                @if($loop->index %3 ==0 )
+                    <div class="row">
+                        <div class="col-md myCard">
+                            <img class="img-fluid" src="{{asset('images/categories/' .strtolower($category->NOMCATEGORIE). '.jpg')}}" onerror="this.onerror=null;this.src='{{asset('images/categories/no-picture-yet.jpg')}}';" />
+                            <h6>{{$category->NOMCATEGORIE}}</h6>
+                        </div>
+                    @continue
+                @endif
+                @if($loop->index %3 != 0 && (($loop->index)+1) %3 !=0)
+                    <div class="col-md myCard">
+                        <img class="img-fluid" src="{{asset('images/categories/' .strtolower($category->NOMCATEGORIE). '.jpg')}}" onerror="this.onerror=null;this.src='{{asset('images/categories/no-picture-yet.jpg')}}';" />
+                        <h6>{{$category->NOMCATEGORIE}}</h6>
+                    </div>
+                    @continue
+                @endif
+                @if($loop->index %3 != 0 && (($loop->index)+1) %3 ==0)
+                            <div class="col-md myCard">
+                                <img class="img-fluid" src="{{asset('images/categories/' .strtolower($category->NOMCATEGORIE). '.jpg')}}" onerror="this.onerror=null;this.src='{{asset('images/categories/no-picture-yet.jpg')}}';" />
+                                <h6>{{$category->NOMCATEGORIE}}</h6>
+                            </div>
+                    </div>
+                    @continue
+                @endif
+            @endforeach
+
+        </div>
     </div>
 
 @endsection

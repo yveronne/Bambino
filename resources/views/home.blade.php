@@ -26,7 +26,8 @@
     <div class="row">
         @foreach($products as $product)
             <div class="col-md col-sm-6 homeCard">
-                <img src="{{$product->firstPhoto()}}" class="img-fluid">
+                {{--<img src="{{$product->firstPicture()}}" class="img-fluid">--}}
+                <img src="{{$product->firstPicture()}}" class="img-fluid">
                 <h6>{{$product->NOM}}</h6>
                 <h6>{{$product->categorie->NOMCATEGORIE}}</h6>
                 <h6>{{$product->PRIX}} F CFA</h6>
@@ -39,7 +40,7 @@
     <div class="row">
         <div class="col-md-8"></div>
         <div class="col-md-4">
-            <a class="btn btn-mine"><i class="material-icons right">keyboard_arrow_right</i>TOUS LES ARTICLES</a>
+            <a class="btn btn-mine" href="{{url('/products')}}"><i class="material-icons right">keyboard_arrow_right</i>TOUS LES ARTICLES</a>
         </div>
     </div>
 

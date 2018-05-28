@@ -74,63 +74,43 @@
                     <div class="row containerDiv">
                         <div class="col-md-12">
                             <div class="row">
-                                <div class="col-md col-sm-6 homeCard">
-                                    <img src="images/habit.jpg" class="img-fluid">
-                                    <h6>Ensemble fillette 3 ans</h6>
-                                    <h6>Vêtements</h6>
-                                    <h6>15000 F CFA</h6>
-                                    <a class="btn btn-mine">Détails</a>
-                                </div>
-                                <div class="col-md col-sm-6 homeCard">
-                                    <img src="images/habit.jpg" class="img-fluid">
-                                    <h6>Ensemble fillette 3 ans</h6>
-                                    <h6>Vêtements</h6>
-                                    <h6>15000 F CFA</h6>
-                                    <a class="btn btn-mine">Détails</a>
-                                </div>
-                                <div class="col-md col-sm-6 homeCard">
-                                    <img src="images/habit.jpg" class="img-fluid">
-                                    <h6>Ensemble fillette 3 ans</h6>
-                                    <h6>Vêtements</h6>
-                                    <h6>15000 F CFA</h6>
-                                    <a class="btn btn-mine">Détails</a>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md col-sm-6 homeCard">
-                                    <img src="images/habit.jpg" class="img-fluid">
-                                    <h6>Ensemble fillette 3 ans</h6>
-                                    <h6>Vêtements</h6>
-                                    <h6>15000 F CFA</h6>
-                                    <a class="btn btn-mine">Détails</a>
-                                </div>
-                                <div class="col-md col-sm-6 homeCard">
-                                    <img src="images/habit.jpg" class="img-fluid">
-                                    <h6>Ensemble fillette 3 ans</h6>
-                                    <h6>Vêtements</h6>
-                                    <h6>15000 F CFA</h6>
-                                    <a class="btn btn-mine">Détails</a>
-                                </div>
-                                <div class="col-md col-sm-6 homeCard">
-                                    <img src="images/habit.jpg" class="img-fluid">
-                                    <h6>Ensemble fillette 3 ans</h6>
-                                    <h6>Vêtements</h6>
-                                    <h6>15000 F CFA</h6>
-                                    <a class="btn btn-mine">Détails</a>
-                                </div>
-                            </div>
+                                @foreach($products as $product)
+                                    @if($loop->index %3 ==0 )
+                                        <div class="row">
+                                            <div class="col-md col-sm-6 homeCard">
+                                                <img src="{{$product->firstPicture()}}" class="img-fluid">
+                                                <h6>{{$product->NOM}}</h6>
+                                                <h6>{{$product->categorie->NOMCATEGORIE}}</h6>
+                                                <h6>{{$product->PRIX}} F CFA</h6>
+                                                <a class="btn btn-mine">Détails</a>
+                                        </div>
+                                        @continue
+                                        @endif
+                                        @if($loop->index %3 != 0 && (($loop->index)+1) %3 !=0)
+                                            <div class="col-md col-sm-6 homeCard">
+                                                <img src="{{$product->firstPicture()}}" class="img-fluid">
+                                                <h6>{{$product->NOM}}</h6>
+                                                <h6>{{$product->categorie->NOMCATEGORIE}}</h6>
+                                                <h6>{{$product->PRIX}} F CFA</h6>
+                                                <a class="btn btn-mine">Détails</a>
+                                            </div>
+                                            @continue
+                                        @endif
+                                        @if($loop->index %3 != 0 && (($loop->index)+1) %3 ==0)
+                                            <div class="col-md col-sm-6 homeCard">
+                                                <img src="{{$product->firstPicture()}}" class="img-fluid">
+                                                <h6>{{$product->NOM}}</h6>
+                                                <h6>{{$product->categorie->NOMCATEGORIE}}</h6>
+                                                <h6>{{$product->PRIX}} F CFA</h6>
+                                                <a class="btn btn-mine">Détails</a>
+                                            </div>
+                                        </div>
+                                        @continue
+                                    @endif
+                                @endforeach
+
                             <div class="row justify-content-md-center">
-                                <div class="col-md-4">
-                                    <ul class="pagination">
-                                        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-                                        <li class="active"><a href="#!">1</a></li>
-                                        <li class="waves-effect"><a href="#!">2</a></li>
-                                        <li class="waves-effect"><a href="#!">3</a></li>
-                                        <li class="waves-effect"><a href="#!">4</a></li>
-                                        <li class="waves-effect"><a href="#!">5</a></li>
-                                        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-                                    </ul>
-                                </div>
+                                {{ $products->links() }}
                             </div>
 
                         </div>

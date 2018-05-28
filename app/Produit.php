@@ -3,6 +3,8 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\File;
+use Illuminate\Support\Facades\Storage;
 
 class Produit extends Model
 {
@@ -14,9 +16,31 @@ class Produit extends Model
         return $this->belongsTo('App\Categorie', 'IDCATEGORIE', 'IDCATEGORIE');
     }
 
-    public function firstPhoto(){
-        //$path = storage_path('photos/' .$this->CODEPRODUIT. '/1.jpg');
-        $path = asset('images/photos/' .$this->CODEPRODUIT. '/1.jpg');
+    public function firstPicture(){
+        $pictures = array();
+        $files = Storage::files('public/photos/' .$this->CODEPRODUIT);
+
+        foreach ($files as $file){
+            $pictures[] = $file;
+        }
+        $delimiter = $this->CODEPRODUIT .'/';
+        $array = explode($delimiter, $pictures[0]);
+        $name = $array[1];
+        $path = asset('storage/photos/' .$this->CODEPRODUIT. '/'. $name);
         return $path;
+    }
+
+    public function pictures(){
+        $pictures = array();
+        $files = Storage::files('public/photos/' .$this->CODEPRODUIT);
+
+        foreach ($files as $file) {
+            $array = explode($this->CODEPRODUIT . '/', $file);
+            $name = $array[1];
+            $path = asset('storage/photos/' . $this->CODEPRODUIT . '/' . $name);
+            $pictures[] = $path;
+        }
+
+        return $pictures;
     }
 }
