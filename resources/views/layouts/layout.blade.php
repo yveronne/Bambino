@@ -61,10 +61,14 @@
         <script src="{{asset('js/compiled.min.js')}}"></script>
         <script src="{{asset('js/jquery-3.2.1.min.js')}}"></script>
         <script src="{{url('https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.js')}}"></script>
+        <script src="{{asset('js/ourScript.js')}}"></script>
         <script>
             $(document).ready(function () {
                 $('.sidenav-trigger').sideNav();
-            })
+            });
+            $(document).ready(function(){
+                $('.modal').modal();
+            });
         </script>
     </body>
 </html>

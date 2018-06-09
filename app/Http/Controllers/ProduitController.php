@@ -11,7 +11,6 @@ class ProduitController extends Controller
 
     public function recent(){
 
-
         $products = Produit::all()->take(4);
         return view('home', compact('products'));
     }
@@ -20,6 +19,11 @@ class ProduitController extends Controller
 
         $products = Produit::paginate(12);
         return view('products', compact('products'));
+    }
+
+    public function details(Produit $product){
+        $product = Produit::findOrFail($product->CODEPRODUIT);
+        return view('details', compact('product'));
     }
 
 }

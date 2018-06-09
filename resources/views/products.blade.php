@@ -82,7 +82,7 @@
                                                 <h6>{{$product->NOM}}</h6>
                                                 <h6>{{$product->categorie->NOMCATEGORIE}}</h6>
                                                 <h6>{{$product->PRIX}} F CFA</h6>
-                                                <a class="btn btn-mine">Détails</a>
+                                                <a class="btn btn-mine" href="{{route('products.details', [$product->CODEPRODUIT])}}">Détails</a>
                                         </div>
                                         @continue
                                         @endif
@@ -92,7 +92,7 @@
                                                 <h6>{{$product->NOM}}</h6>
                                                 <h6>{{$product->categorie->NOMCATEGORIE}}</h6>
                                                 <h6>{{$product->PRIX}} F CFA</h6>
-                                                <a class="btn btn-mine">Détails</a>
+                                                <a class="btn btn-mine" href="{{route('products.details', [$product->CODEPRODUIT])}}">Détails</a>
                                             </div>
                                             @continue
                                         @endif
@@ -102,7 +102,7 @@
                                                 <h6>{{$product->NOM}}</h6>
                                                 <h6>{{$product->categorie->NOMCATEGORIE}}</h6>
                                                 <h6>{{$product->PRIX}} F CFA</h6>
-                                                <a class="btn btn-mine">Détails</a>
+                                                <a class="btn btn-mine" href="{{route('products.details',[$product])}}">Détails</a>
                                             </div>
                                         </div>
                                         @continue

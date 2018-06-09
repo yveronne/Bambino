@@ -10,6 +10,7 @@ class Produit extends Model
 {
     //
     protected $table = 'produit';
+    protected $primaryKey = 'CODEPRODUIT';
 
     public function categorie(){
 

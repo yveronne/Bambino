@@ -11,7 +11,6 @@
 @endsection
 
 @section('content')
-    <?php $i=0; ?>
 
     <div class="row myBreadcrumb align-items-center">
         <div class="col-md-12">

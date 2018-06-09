@@ -8,6 +8,7 @@ class Categorie extends Model
 {
     //
     protected $table = 'categorie';
+    protected $primaryKey = 'IDCATEGORIE';
 
     public function products(){
 
