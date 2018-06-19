@@ -23,4 +23,6 @@ Route::get('/categories', 'CategorieController@index')->name('categories');
 
 Route::get('/products/{product}', ['uses' => 'ProduitController@details'])->name('products.details');
 
-Route::post('/cart/{product}', 'CartController@addToCart')->name('addToCart');
+Route::resource('cart', 'PanierController', ['only'=> ['index', 'store', 'update', 'destroy']]);
+
+Route::post('/command', 'CommandController@save')->name('command');

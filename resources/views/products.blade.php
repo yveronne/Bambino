@@ -37,8 +37,9 @@
                             <input type="text" class="form-control" id="maxPrice" placeholder="Prix maximum">
                         </div>
                         <h6>Catégorie</h6>
-                        <div class="input-field">
-                            <select>
+                        <div>
+                            <label for="categorySelect">Catégorie</label>
+                            <select class="mdb-select" id="categorySelect">
                                 <option value="" disabled selected>Choisissez la catégorie</option>
                                 <option value="chaussures">Chaussures</option>
                                 <option value="culottes">Culottes</option>
@@ -54,19 +55,19 @@
                             <h6>Trier par:</h6>
                             <br>
                             <form>
-                                <div class="input-field col-md-4">
-                                    <select>
+                                <div>
+                                    <label for="priceSelect">Prix</label>
+                                    <select class="mdb-select" id="priceSelect">
                                         <option value="increasingPrice">Croissant</option>
                                         <option value="decreasingPrice">Décroissant</option>
                                     </select>
-                                    <label>Prix</label>
                                 </div>
-                                <div class="input-field col-md-4">
-                                    <select>
+                                <div>
+                                    <label for="dateSelect">Date d'ajout</label>
+                                    <select class="mdb-select" id="dateSelect">
                                         <option value="increasingDate">Croissante</option>
                                         <option value="decreasingDate">Décroissante</option>
                                     </select>
-                                    <label>Date d'ajout</label>
                                 </div>
                             </form>
                         </div>

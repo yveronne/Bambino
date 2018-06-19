@@ -188,5 +188,59 @@ nav .sidenav-trigger {
 	font-family: 'Lato';
 	font-weight: bold;
 	text-align: center;
+	height: 10%;
 }
+
+#productDetailsDiv{
+	border: 1px solid #9C1735;
+}
+
+table#cart thead{
+	border: 1px solid #9C1735
+}
+
+table#cart tr{
+	border: 1px solid #9C1735
+}
+
+table#cart td{
+	border: 1px solid #9C1735
+}
+
+table#cart th{
+	border: 1px solid #9C1735
+}
+
+#cart th{
+	font-family: 'Lato';
+	font-style: italic;
+}
+
+#cart td{
+	font-family: 'roboto';
+	font-size: 120%;
+}
+
+h6.cart{
+	font-family: 'Lato';
+}
+
+#toPay{
+	font-family: 'Roboto';
+	font-weight: bold;
+	color: #272759;
+	font-size: 200%;
+}
+
+.detailsLabel{
+	font-family: 'Lato';
+	font-weight: bold;
+}
+
+#priceLabel{
+	color: #9C1735;
+	font-weight: bold;
+	font-size: 150%;
+}
+
 

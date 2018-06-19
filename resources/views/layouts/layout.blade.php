@@ -30,7 +30,7 @@
 
                     <div id="top-left-nav">
                         <ul id="nav-mobile" class="right hide-on-med-and-down">
-                            <li><a href="#" class="nav-link"><i class="material-icons left">shopping_cart</i>Mon panier</a></li>
+                            <li><a href="{{url('/cart')}}" class="nav-link"><i class="material-icons left">shopping_cart</i>Mon panier</a></li>
                             <li><a href="#" class="nav-link"><i class="material-icons left">perm_identity</i>Mon compte</a></li>
                         </ul>
                     </div>
@@ -42,7 +42,7 @@
             </nav>
 
             <ul class="sidenav" id="mobile-demo">
-                <li><a href="#" class="nav-link"><i class="material-icons left">shopping_cart</i>Mon panier</a></li>
+                <li><a href="{{url('/cart')}}" class="nav-link"><i class="material-icons left">shopping_cart</i>Mon panier</a></li>
                 <li><a href="#" class="nav-link"><i class="material-icons left">perm_identity</i>Mon compte</a></li>
             </ul>
             <br>
@@ -68,6 +68,12 @@
             });
             $(document).ready(function(){
                 $('.modal').modal();
+            });
+            $(document).ready(function(){
+                $('select').formSelect();
+            });
+            $(document).ready(function() {
+                $('.mdb-select').material_select();
             });
         </script>
     </body>
