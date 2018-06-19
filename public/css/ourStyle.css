@@ -182,3 +182,11 @@ nav .sidenav-trigger {
 	display: block;
 }
 
+.modal .modal-title{
+	background-color: #99D1F3;
+	font-size: 150%;
+	font-family: 'Lato';
+	font-weight: bold;
+	text-align: center;
+}
+
